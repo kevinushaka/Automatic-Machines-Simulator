@@ -1,0 +1,62 @@
+# Miniprojet1
+
+# Le problème à traiter est celui du drapeau tricolore, sur une machine de Turing.
+#
+#Données :
+#	un mot de la forme XXX...XXX(Xn) de longueur n(n>0).
+#Résultat :
+#	le mot LLL...LLLMMM...MMMNNN...NNN(LiMjNk), avec i≤j≤k≤i+1 avec n=i+j+k.
+#
+# Exemples : 
+#	XXXXXXdonneLLMMNN
+#	XXXXXXXXdonneLLMMNNN
+# python3 -m am simulate miniprojet1.txt -n MINIPROJET1.1 -t "XXXXXX"
+
+NEW "MINIPROJET1.1" 1
+START @0
+END @20 "VALID"
+
+FROM @0
+'X 'X R
+'_ '_ L @1
+'M 'N L @5
+
+FROM @1
+'X 'N L @2
+
+FROM @2
+'M 'M L
+'N 'N L
+'_ '_ S @20
+'X 'M L @3
+
+FROM @3
+'X 'X L
+'_ '_ R @4
+'L 'L R @4
+
+FROM @4
+'M 'M S @20
+'X 'L R @9
+
+FROM @5
+'X 'M R @6
+'N 'M R @6
+
+FROM @6
+'N 'N R @7
+
+FROM @7
+'M 'N L @5
+'N 'N L @8
+
+FROM @8
+'L 'L L
+'M 'M L
+'N 'N L
+'_ '_ S @20
+'X 'M L @3
+
+FROM @9
+'X 'X S @0
+'M 'M S @20
