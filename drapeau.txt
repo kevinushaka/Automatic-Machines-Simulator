@@ -101,29 +101,29 @@ FROM @7
 #Exercice 4:
 
 NEW "EXO4" 2
-START @1
-END @6 "VALID"
+START @0
+END @5 "VALID"
+
+FROM @0
+'X,'_ 'N,'_ R,S @1
+'_,'_ '_,'_ L,S @3
 
 FROM @1
-'X,'_ 'N,'_ R,S @2
-'_,'_ '_,'_ L,S @4
+'X,'_ 'M,'_ R,S @2
+'_,'_ '_,'_ L,S @3
 
 FROM @2
-'X,'_ 'M,'_ R,S @3
-'_,'_ '_,'_ L,S @4
+'X,'_ 'L,'L R,R @0
+'_,'_ '_,'_ L,S @3
 
 FROM @3
-'X,'_ 'L,'L R,R @1
-'_,'_ '_,'_ L,S @4
-
-FROM @4
 'N,'_ 'N,'_ L,S
 'L,'_ 'L,'_ L,S
 'M,'_ 'M,'M L,R
-'_,'_ '_,'_ R,S @5
+'_,'_ '_,'_ R,S @4
 
-FROM @5
+FROM @4
 'N,'_ 'N,'N R,R
 'L,'_ 'L,'_ R,S
 'M,'_ 'M,'_ R,S
-'_,'_ '_,'_ S,S @6
+'_,'_ '_,'_ S,S @5
