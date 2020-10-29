@@ -11,50 +11,6 @@
 #	XXXXXXdonneLLMMNN
 #	XXXXXXXXdonneLLMMNNN
 
-#Exercice 1:
-
-NEW "EXO1" 1
-START @0
-END @9 "VALID"
-
-FROM @0
-'X 'X R
-'_ '_ L @1
-'M 'N L @6
-
-FROM @1
-'X 'N L @2
-
-FROM @2
-'M 'M L
-'N 'N L
-'_ '_ S @9
-'L 'L S @9
-'X 'M L @3
-
-FROM @3
-'X 'X L
-'_ '_ R @4
-'L 'L R @4
-
-FROM @4
-'M 'M S @9
-'X 'L R @5
-
-FROM @5
-'X 'X S @0
-'M 'M S @9
-
-FROM @6
-'X 'M R @7
-'N 'M R @7
-
-FROM @7
-'N 'N R @8
-
-FROM @8
-'M 'N L @6
-'N 'N L @2
 
 #Exercice 2:
 
@@ -127,3 +83,96 @@ FROM @4
 'L,'_ 'L,'_ R,S
 'M,'_ 'M,'_ R,S
 '_,'_ '_,'_ S,S @5
+
+#Exercice 1:
+
+NEW "EXO1" 1
+START @0
+END @20 "VALID"
+
+FROM @0
+'_ '_ L @1
+
+FROM @1
+'X 'N L @2
+
+FROM @2
+'X 'M L @3
+'_ '_ R @5
+
+FROM @3
+'X 'L L @4
+'_ '_ R @5
+
+FROM @4
+'X 'N L @2
+'_ '_ R @5
+
+FROM @5
+'N 'N R
+'M 'M R
+'L 'L R
+'_ '_ L @6
+
+FROM @6
+'N 'N L @7
+
+FROM @7
+'M 'M L
+'L 'L L
+'N 'X R @8
+'_ '_ R @12
+
+FROM @8
+'M 'M R
+'L 'L R
+'N 'N L @9
+'B 'B L @9
+
+FROM @9
+'L 'N L @10
+'M 'N L @11
+
+FROM @10
+'L 'L L
+'M 'M L
+'X 'L L @7
+
+FROM @11
+'L 'L L
+'M 'M L
+'X 'M L @7
+
+FROM @12
+'L 'L R
+'M 'M R
+'N 'N L @13
+
+FROM @13
+'M 'M L @14
+'L 'L L @15
+'_ '_ S @20
+
+FROM @14
+'M 'M L
+'L 'L L @15
+
+FROM @15
+'L 'L L @16
+'_ '_ S @20
+
+FROM @16
+'L 'L L
+'M 'L R @17
+'_ '_ S @20
+
+FROM @17
+'L 'L R @18
+
+FROM @18
+'L 'L R
+'M 'M L @19
+'N 'N L @19
+
+FROM @19
+'L 'M L @13
