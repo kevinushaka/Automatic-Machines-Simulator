@@ -10,9 +10,10 @@
 # Exemples : 
 #	XXXXXXdonneLLMMNN
 #	XXXXXXXXdonneLLMMNNN
-# python3 -m am simulate miniprojet1.txt -n MINIPROJET1.1 -t "XXXXXX"
 
-NEW "MINIPROJET1.1" 1
+#Exercice 1:
+
+NEW "EXO1" 1
 START @0
 END @9 "VALID"
 
@@ -57,7 +58,7 @@ FROM @8
 
 #Exercice 2:
 
-NEW "MINIPROJET1.2" 1
+NEW "EXO2" 1
 START @0
 END @9 "VALID"
 
@@ -96,3 +97,33 @@ FROM @6
 
 FROM @7
 'M 'N L @2
+
+#Exercice 4:
+
+NEW "EXO4" 2
+START @1
+END @6 "VALID"
+
+FROM @1
+'X,'_ 'N,'_ R,S @2
+'_,'_ '_,'_ L,S @4
+
+FROM @2
+'X,'_ 'M,'_ R,S @3
+'_,'_ '_,'_ L,S @4
+
+FROM @3
+'X,'_ 'L,'L R,R @1
+'_,'_ '_,'_ L,S @4
+
+FROM @4
+'N,'_ 'N,'_ L,S
+'L,'_ 'L,'_ L,S
+'M,'_ 'M,'M L,R
+'_,'_ '_,'_ R,S @5
+
+FROM @5
+'N,'_ 'N,'N R,R
+'L,'_ 'L,'_ R,S
+'M,'_ 'M,'_ R,S
+'_,'_ '_,'_ S,S @6
