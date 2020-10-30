@@ -160,7 +160,7 @@ FROM @14
 FROM @15
 'L 'L L @16
 '_ '_ S @20
-'M 'L L @17
+'M 'L R @17
 
 FROM @16
 'L 'L L
